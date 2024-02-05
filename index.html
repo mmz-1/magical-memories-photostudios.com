@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport", content="width=device-width, initial=scale=1.0">
+    <link rel="shortcut icon" type="x-icon" href="logogo.png">
+    <meta http-equiv="XA-UA-Compatible" content="IE-edge">
+    <title>Magical Memories Studios</title>
+    <script src="https://kit.fontawesome.com/a6f4a56684.js" crossorigin="anonymous"></script>
+    <link  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        :root{
+            --transition: all 300ms ease-in-out;
+            --dark-color: #332e29;
+            --light-color:#fff;
+        }
+
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+            outline: 0;
+        }
+        html{
+            font-size: 10px;
+            scroll-behavior: smooth;
+        }
+        body{
+            font-size: 1.6rem;
+            font-family: 'poppins', sans-serif;
+            line-height: 1.6;
+        }
+        button, .btn{
+            cursor: pointer;
+            border: none;
+            background: transparent;
+        }
+        ul{
+            list-style-type: none;
+        }
+        a{
+            text-decoration: none;
+            color: var(--dark-color);
+        }
+        img{
+            width: 100%;
+            display: block;
+        }
+        .container{
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .vh-100{
+            min-height: 100vh;
+        }
+        h1, h2, h3{
+            margin-top: 0;
+            line-height: 1.3;
+            margin-bottom: 2rem;
+            color: var(--dark-color);
+        }
+        .flex{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+        } 
+        .py-7{
+            padding: 7rem 0;
+        }
+        .grid{
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 1rem;
+        }
+        .lead{
+            opacity: 0.8;
+            padding: 1rem;
+            font-size: 1.7rem;
+            font-weight: 300;
+            line-height: 1.8;
+        }
+        #header{
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('../Magicalmemories/pics/hd.jpg') center/cover no-repeat fixed;
+            justify-content: flex-start;
+            align-items: flex-end;
+
+        }
+        #header .container{
+            width: 100%;
+        }
+        .header-content{
+            padding-bottom: 4rem;
+        }
+        .header-content h1{
+            font-size: 4.5rem;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            color: var(--light-color)
+        }
+        .header-content h3{
+            color: var(--light-color);
+            font-weight: 300;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-top: 1.5rem;
+        }
+        .social-links{
+            display: flex;
+            margin-top: 3.5rem;
+        }
+        .social-links li a{
+            width: 40px;
+            height: 40px;
+            background-color: var(--light-color);
+            margin-right: 1rem;
+            border-radius: .3rem;
+            box-shadow: 0 0 6px 5px rgba(0, 0, 0, 0.2);
+            transition: var(--transition);
+        }
+        .social-links li a:hover{
+            opacity: 0.9;
+        }
+        
+        
+        .about-left{
+            margin-bottom: 15px;
+            height: 480px;
+            overflow: hidden;
+        }
+        .btn-down{
+            font-size: 3rem;
+            display: inline-block;
+            margin-top: 1rem;
+            transition: var(--transition);
+        }
+        .btn-down:hover{
+            opacity: 0.8;
+            transform: translateY(5px);
+        }
+        .btn-down-white{
+            color: var(--light-color);
+        }
+        .title{
+            margin-bottom: 5rem;
+        }
+        .title h2{
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 600;
+            position: relative;
+        }
+        .title h2::after{
+            position: absolute;
+            content: "";
+            top: 120%;
+            left: 0;
+            width: 70px;
+            height: 4px;
+            background-color: var(--dark-color);
+        }
+        hr{
+            height: 6px;
+            width: 90px;
+            margin-left:550px;
+            background: #332e29;
+            border: 1px solid #332e29;
+            border-radius: 10px;
+        }
+        h6{
+            font-size: 25px;
+            text-align: center;
+            color: var(--dark-color);
+
+        }
+
+        
+
+        #work{
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('../Magicalmemories/pics/space.jpg') center/cover no-repeat fixed;
+            color: var(--light-color);
+        }
+        #work .title h2, #work h3{
+            color: var(--light-color);
+        }
+        #work .title h2::after{
+            background: var(--light-color);
+        }
+        .work-bottom{
+            margin-top: 4rem;
+            text-align: center;
+        }
+        .work-bottom > div .icon fa-solid{
+            width: 50px;
+            margin:  0 auto 1.7rem auto;
+        }
+        .portfolio-grid > div{
+            transition: var(--transition);
+        }
+        .portfolio-grid > div:hover{
+            transform: scale(0.9);
+        } 
+        #contact{
+            background-color: rgb(248, 248, 248);
+        }
+        .contact-content{
+            flex-direction: column;
+            align-items: stretch;
+        }
+        .contact-left{
+            margin-bottom: 5rem;
+        }
+        .contact-left .lead{
+            padding: 0.5rem;
+        }
+        .contact-left form{
+            margin-top: 3rem;
+        }
+        .contact-left form .form-control{
+            display: block;
+            margin: 1.6rem 0;
+            border: 2px solid rgba(0,0,0,0.3);
+            padding: 1rem;
+            width: 100%;
+        }
+        .contact-left form .form-control::placeholder{
+            font-size: 15px;
+            font-family: 'poppins' sans-serif;
+        }
+        .contact-left .btn-submit{
+            padding: 1.4rem 3rem;
+            font-family: 'poppins' sans-serif;
+            background-color: var(--dark-color);
+            color: var(--light-color);
+            margin-top: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 1.6rem;
+            transition: var(--transition);
+        }
+        .contact-left .btn-submit:hover{
+            background-color: orangered;
+        }
+        #insta{
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('../Magicalmemories/pics/hd.jpg') center/cover no-repeat fixed;
+            min-height: 65vh;
+        }
+        #insta .title h2{
+            color: var(--light-color);
+        }
+        #insta .title h2::after{
+            background-color: var(--light-color);
+        }
+        .insta-grid > div{
+            height: 400px; 
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .insta-grid > div img{
+            height: 100%;
+            object-fit: cover;
+        }
+        .insta-grid > div:hover{
+            transform: scale(0.9);
+        }
+        .hero-btn{
+            padding: 10px 10px;
+            background: #fff;
+            color: var(--dark-color);
+            font-size: 2rem;
+            align-content: center;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        .hero-btn:hover{
+            background-color: aquamarine
+        }
+
+        #footer{
+            background-color: var(--dark-color);
+            color: var(--light-color);
+        }
+        .footer-content{
+            text-align: center;
+        }
+        .footer-content h3{
+            color: var(--light-color);
+            font-size: 2.5rem;
+            letter-spacing: 1px;
+        }
+        .footer-content ul{
+            flex-direction: column;
+        }
+        .footer-content ul li a{
+            color: var(--light-color);
+            font-size: 1.5rem;
+            transition: var(--transition);
+        }
+        .footer-content ul li a:hover{
+            opacity: 0.7;
+        }
+        .footer-content ul li{
+            margin: .5rem 1rem;
+        }
+        .footer-content > div:first-child{
+            margin-bottom: 3rem;
+        }
+        .footer-content >:first-child div{
+            width: 100px;
+            height: 100px;
+            overflow: hidden;
+            margin: 5rem auto;
+            border-radius: 60%;
+        }
+        .footer-content flex{
+            font-weight: 400;
+        }
+ 
+
+        @media(min-width:450px){
+            .work-bottom{
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 3rem;
+                row-gap: 0;
+            }
+            .header-content h1{
+                font-size: 3rem;
+            }
+            hr{
+                margin-left: 150px;
+            }
+        }
+        @media(min-width:576px){
+            .title h2{
+                font-size: 4rem;
+            }
+            .work-bottom{
+                grid-template-columns: repeat(4, 1fr);
+            }
+            .portfolio-grid{
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .portfolio-grid > div{
+                height: 300px;
+                overflow: hidden;
+            }
+            .portfolio-grid > div img{
+                height: 100%;
+                object-fit: cover;
+            }
+            .contact-left form .form-control{
+                max-width: 500px;
+            }
+            .footer-content ul{
+                flex-direction: row;
+            }
+
+            hr{
+                display: none;
+            }
+        }
+        @media(max-width:400px){
+            hr{
+                display: none;
+            }
+            .header-content h1{
+                font-size: 3rem;
+            }
+        }
+        @media(max-width:412px){
+            hr{
+                margin-left: 150px;
+            }
+        }
+        @media(max-width:414px){
+            hr{
+                margin-left: 150px;
+            }
+        }
+        @media(min-width:428px){
+            hr{
+                margin-left: 150px;
+            }
+        }
+        @media(max-width:360px){
+            hr{
+                margin-left:100px;
+            }
+            .header-content h1{
+                font-size: 3rem;
+            }
+        }
+        @media(min-width: 768px){
+            .header-content h1{
+                font-size: 4rem;
+            }
+            .about-content, .work-top{
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 6rem;
+                row-gap: 0;
+            }
+            .about-left{
+                margin-bottom: 0;
+            }
+            .contact-content{
+                flex-direction: row;
+            }
+            .contact-right{
+                padding-left: 3rem;
+                width: 50%;
+            }
+            .contact-left{
+                width: 50%;
+            }
+            hr{
+               margin-left: 350px;
+            }
+            .insta-grid{
+                grid-template-columns: repeat((2, 1fr));
+            }
+        }
+        @media(min-width:992px){
+            .insta-grid{
+                grid-template-columns: repeat(4, 1fr);
+            }
+            .insta-grid > div{
+                height: 250px;
+            }
+        }
+        @media(min-width:1200px){
+            .portfolio-grid{
+                grid-template: repeat(3, 1fr);
+            }
+            .portfolio-grid > div:nth-child(2){
+                grid-column: 2/4;
+            }
+            .portfolio-grid > div:nth-child(6){
+                grid-column: 1 / 3;
+            }
+            hr{
+                margin-left: 550px;
+            }
+        }
+
+        
+        
+    </style>
+</head>
+<body>
+    <header id = "header"  class="vh-100 flex" >
+        <div class="container">
+            <div class="header-content">
+                <h1>We are Proffessional<br><span class="typewrite" data-loop="yes" data-speed="100" data-delay="2000" data-words='["AT MAGICAL MEMORIES STUDIOS", "photographers", "photo editors", "videographers", "events organisers" ]'></span> </h1>
+                <h3>Percy Komugisha and Christopher</h3>
+
+                <ul class="social-links">
+                    <li>
+                        <a href="#" class="flex">
+                            <i class="fa-brands fa-facebook-f" ></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex">
+                            <i class="fa-brands fa-instagram" href="https://www.instagram.com/magical_memories_photography_?igsh=dTBvdjJpN3gxbnl1&utm_source=qr"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="flex">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- end of header-->
+
+    <main>
+        <section id = "about" class="about py-7">
+            <div class="container">
+                <div class="about-content grid">
+                    <div class="about-left">
+                        <img src="pics/IMG_0121.jpg" height="350px" style="box-shadow: 10px 20px orangered;">
+                    </div>
+                    <div class="about-right">
+                        <div class="title">
+                            <h2>About us</h2>
+                        </div>
+                        <p class="lead">Magical Memories photo studios combines photography degrees with our marketing degree to find the right balance between creativity and commercial sinse. Percy Komugisha is the CEO of the reknown Magical memories studio and has been in this entriguing field for the last 9 years taking explicit shots and adding up her protifolio with the secenic moments in humanity. Percy is an all round photographer that aims at spreading meaning in photography together with her experienced team of photographers all around Africa.</p>
+                        <a href="#work" class="btn-down">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+        <section id="work" class="vh-100 flex py-7" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('../Magicalmemories/pics/space.jpg') center/cover no-repeat fixed;">
+            <div class="container">
+                <div class="work-content">
+                    <div class="title">
+                        <h2>What we do</h2>
+                    </div>
+                    <ul class="work-top grid">
+                        <li class="lead"><i class="fa-regular fa-circle-dot"></i>We work in accordance to the global photography scope in relation to color management and visual essence while producing our work</li>
+                        <li class="lead"><i class="fa-regular fa-circle-dot"></i>We then ensure that the photos taken are edited to maximum quality while maintainig the same scenic appearance of our specimen or study</li>
+                        <li class="lead"><i class="fa-regular fa-circle-dot"></i>The edited pictures are thouroughly scrutinized by our elite team of highly proffessional photographers before being uploaded or forwarded to owners and public platforms</li>
+                        <li class="lead"><i class="fa-regular fa-circle-dot"></i>From there on our work is published for global photography markets or to clients that opted for our exquisite services</li>
+                    </ul>
+                        <div class="work-bottom grid">
+                            <div >
+                                <span class="icon"><i class="fa-solid fa-hippo" style="font-size:50px;"></i></span>
+                                <h3>wildlife</h3>
+                            </div>
+                            <div >
+                                <span class="icon"><i class="fa-solid fa-people-group" style="font-size:50px;"></i></span>
+                                <h3>family</h3>
+                            </div>
+                            <div >
+                                <span class="icon"><i class="fa-solid fa-camera" style="font-size:50px;"></i></span>
+                                <h3>potraits</h3>
+                            </div>
+                            <div >
+                                <span class="icon"><i class="fa-solid fa-mountain-sun" style="font-size:50px;"></i></span>
+                                <h3>landsape</h3>
+                            </div>
+                        </div>
+                    <a href="#portfolio" class="btn-down btn-down-white">
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </a>   
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="vh-100 py-7">
+            <div class="container">
+                <div class="portfolio-content">
+                    <div class="title">
+                        <h2>Our recent projects</h2>
+                        <a href="#content" class="btn-down">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </a>
+                    </div>
+                    <div><h6>~ Weddings and graduations ~</h6>
+                        <br>
+                    <hr>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="portfolio-grid grid">
+                        <div><img src="pics/AFRI0026.jpg"></div>
+                        <div><img src="pics/AFRI6475.jpg"></div>
+                        <div><img src="pics/AFRI0755.jpg"></div>
+                        <div><img src="pics/AFRI6446.jpg"></div>
+                        <div><img src="pics/AFRI0195.gif"></div>
+                        
+                    </div>
+                    <br>
+                    <br>
+                    <div class="hippo"><h6>~ Family photos ~</h6>
+                        <br>
+                    <hr>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="portfolio-grid grid">
+                        <div><img src="pics/magical m (7).jpg"></div>
+                        <div><img src="pics/AFRI1507.jpg"></div>
+                        <div><img src="pics/AFRI3124.jpg" style="size: 20px;"></div>
+                        <div><img src="pics/MAGICAL MZ (57).jpg" style="padding: 10px 10px;"></div>
+                        <div><img src="pics/AFRI5024.jpg"></div>
+                        
+                    </div>
+                    <br>
+                    <br>
+                    <div><h6>~  photoshoots ~</h6>
+                        <br>
+                    <hr>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="portfolio-grid grid">
+                        <div><img src="pics/magical m (16).JPG"></div>
+                        <div><img src="pics/AFRI0892.jpg"></div>
+                        <div><img src="pics/AFRI9913.jpg"></div>
+                        <div><img src="pics/IMG_0121.jpg"></div>
+                        <div><img src="pics/MMZ (30).JPG"></div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="content" class="py-7">
+            <div class="container">
+                <div class="contact-content flex">
+                    <div class="contact-left">
+                        <div class="title">
+                            <h2>Contact us today</h2>
+                        </div>
+                        <p class="lead"><i class="fas fa-phone-alt" style="font-size:40px;"></i>  0703984996 or 0755216839</p>
+                        <br>
+                        <br>
+                        <p class="lead"><i class=" fas fa-envelope" style="font-size:40px;"></i>  magicalmemoriesphotostudios</p>
+                        <br>
+                        <br>
+                        <p class="lead"><i class=" fa-brands fa-instagram" style="font-size:40px;"></i>  magical_memories_photography_</p>
+                    </div>
+    
+                    <div class="contact-right">
+                        <img src="pics/magical memories logo-2.jpg" alt="contact image" style="box-shadow: 10px 20px orangered;">
+                    </div>
+                </div>
+            </div>
+         </section>
+    
+         <section id="insta" class="py-7" style="background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.3)), url('../Magicalmemories/pics/hd.jpg') center/cover no-repeat fixed; min-height: 65vh; ">
+            <div class="container">
+                <div class="insta-content">
+                    <div class="title">
+                        <h2>LATEST ON OUR INSTAGRAM !!</h2>
+                        <a href="#footer" class="btn-down btn-down-white">
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                    </div>
+                    <div class="insta-grid grid" >
+                            <div><img src="pics/AFRI0066.jpg"></div>
+                            <div><img src="pics/AFRI0121.jpg"></div>
+                            <div><img src="pics/AFRI0014.JPG"></div>
+                            <div><img src="pics/AFRI9913.jpg"></div>
+                            <div><img src="pics/cartoon-cute-bee-with-big-glasses-mascot-carrying-a-red-study-book-bee-back-to-school-vector.jpg"></div>
+                            <div><img src="pics/n (5).jpg"></div>
+                            <div><img src="pics/p.jpg"></div>
+                            <div><img src="pics/Magical memories (3).jpg"></div>
+                    </div>
+                    <br>
+                    <br>
+                    <a href="https://www.instagram.com/magical_memories_photography_?igsh=dTBvdjJpN3gxbnl1&utm_source=qr" class="hero-btn">Check out our instagram</a>
+                </div>
+            </div>
+         </section>
+
+        
+    </main>
+    
+
+    <footer id="footer" class="py-7">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <h3>PERCY KOMUGISHA</h3>
+                    <div><img src="pics/IMG_0121.jpg"></div>
+                </div>
+
+                <div>
+                    <h3>Internal page links</h3>
+                    <ul class="flex">
+                        <li><a href="#about"><i class="fa-solid fa-people-group"></i> About us</a></li>
+                        <li><a href="#work"><i class="fa-solid fa-circle-dot"></i> What we do</a></li>
+                        <li><a href="#portfolio"><i class="fa-solid fa-camera"></i> Our projects</a></li>
+                        <li><a href="#content"><i class="fa-solid fa-phone-alt"></i> Contact</a></li>
+                        <li><a href="#insta"><i class="fa-brands fa-instagram"></i> instagram</a></li>
+                    </ul>
+                </div>
+                <br>
+                
+                <span style="font-size: 10px; margin-bottom: -10px;">&copy; All rights reserved for Magical Memories Photo studios<br>Designed by The Omblo Web developers Company</span>
+            </div>
+        </div>
+    </footer>
+    
+     
+
+    <!---- typewriter ---->
+    <script src="typewriting-master/typewriting-master/typewriting.js"></script>
+</body>
+</html>
